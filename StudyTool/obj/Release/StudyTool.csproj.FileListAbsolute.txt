@@ -1,0 +1,17 @@
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyTool\bin\Release\StudyTool.exe.config
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyTool\bin\Release\StudyTool.exe
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyTool\bin\Release\StudyTool.pdb
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyTool\bin\Release\StudyToolReader.dll
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyTool\bin\Release\StudyToolReader.pdb
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyTool\obj\Release\StudyTool.csprojResolveAssemblyReference.cache
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyTool\obj\Release\StudyTool.CreateClass.resources
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyTool\obj\Release\StudyTool.EditQuestionForm.resources
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyTool\obj\Release\StudyTool.Loader.resources
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyTool\obj\Release\StudyTool.NewQuestionForm.resources
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyTool\obj\Release\StudyTool.NewSectionForm.resources
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyTool\obj\Release\StudyTool.Properties.Resources.resources
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyTool\obj\Release\StudyTool.StudyTool.resources
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyTool\obj\Release\StudyTool.csproj.GenerateResource.Cache
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyTool\obj\Release\StudyTool.exe
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyTool\obj\Release\StudyTool.pdb
+C:\Users\Ben\Documents\Visual Studio 2013\Projects\StudyTool\StudyTool\bin\Release\StudyToolReader.xml

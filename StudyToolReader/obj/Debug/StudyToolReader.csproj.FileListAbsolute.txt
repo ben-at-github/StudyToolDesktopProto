@@ -1,0 +1,14 @@
+c:\users\ben\documents\visual studio 2013\Projects\StudyTool\StudyToolReader\bin\Debug\StudyToolReader.dll
+c:\users\ben\documents\visual studio 2013\Projects\StudyTool\StudyToolReader\bin\Debug\StudyToolReader.pdb
+c:\users\ben\documents\visual studio 2013\Projects\StudyTool\StudyToolReader\obj\Debug\StudyToolReader.dll
+c:\users\ben\documents\visual studio 2013\Projects\StudyTool\StudyToolReader\obj\Debug\StudyToolReader.pdb
+c:\users\ben\documents\visual studio 2013\Projects\StudyTool\StudyToolReader\obj\Debug\StudyToolReader.csprojResolveAssemblyReference.cache
+C:\Users\Ben\Documents\Visual Studio 2013\Projects\StudyTool\StudyToolReader\bin\Debug\StudyToolReader.XML
+C:\Users\Ben\Documents\Visual Studio 2013\Projects\StudyTool\StudyToolReader\bin\Debug\StudyToolReader.dll.config
+C:\Users\Ben\Documents\Visual Studio 2015\Projects\StudyTool\StudyToolReader\bin\Debug\StudyToolReader.dll.config
+C:\Users\Ben\Documents\Visual Studio 2015\Projects\StudyTool\StudyToolReader\bin\Debug\StudyToolReader.XML
+C:\Users\Ben\Documents\Visual Studio 2015\Projects\StudyTool\StudyToolReader\bin\Debug\StudyToolReader.dll
+C:\Users\Ben\Documents\Visual Studio 2015\Projects\StudyTool\StudyToolReader\bin\Debug\StudyToolReader.pdb
+C:\Users\Ben\Documents\Visual Studio 2015\Projects\StudyTool\StudyToolReader\obj\Debug\StudyToolReader.csprojResolveAssemblyReference.cache
+C:\Users\Ben\Documents\Visual Studio 2015\Projects\StudyTool\StudyToolReader\obj\Debug\StudyToolReader.dll
+C:\Users\Ben\Documents\Visual Studio 2015\Projects\StudyTool\StudyToolReader\obj\Debug\StudyToolReader.pdb

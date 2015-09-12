@@ -1,0 +1,4 @@
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyToolReader\bin\x64\Release64\StudyToolReader.dll
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyToolReader\bin\x64\Release64\StudyToolReader.pdb
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyToolReader\obj\x64\Release64\StudyToolReader.dll
+C:\Users\Ben\documents\visual studio 2013\Projects\StudyTool\StudyToolReader\obj\x64\Release64\StudyToolReader.pdb

@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StudyToolReader</name>
+    </assembly>
+    <members>
+        <member name="T:StudyToolReader.Class">
+            <summary>
+            Organizes and represents StudyToolReader.Questions
+            </summary>
+        </member>
+        <member name="P:StudyToolReader.Class.name">
+            <summary>
+            Gets/Sets the name of the class.
+            </summary>
+        </member>
+        <member name="P:StudyToolReader.Class.questions">
+            <summary>
+            Gets/Sets the set of questions this class has.
+            </summary>
+        </member>
+        <member name="P:StudyToolReader.Class.filePath">
+            <summary>
+            Where to find the file.
+            </summary>
+        </member>
+        <member name="P:StudyToolReader.Class.Id">
+            <summary>
+            Uniqueidentifier of the Class.
+            </summary>
+        </member>
+        <member name="M:StudyToolReader.Class.#ctor">
+            <summary>
+            Initializes the Class to the default values.
+            </summary>
+        </member>
+        <member name="M:StudyToolReader.Class.#ctor(System.Xml.XmlDocument)">
+            <summary>
+            Initializes the Class with the data from the class node in the XmlDocument.
+            </summary>
+            <param name="xdoc">XmlDocument data to be used.</param>
+        </member>
+        <member name="M:StudyToolReader.Class.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Initializes the data with the data from the XmlNode.
+            </summary>
+            <param name="node">XmlNode to get data from.</param>
+        </member>
+        <member name="M:StudyToolReader.Class.#ctor(System.String)">
+            <summary>
+            Initializes data from the class node from the given document.
+            </summary>
+            <param name="filePath">Path to the file where the XmlDocument that has the data is located.</param>
+            <exception cref="T:StudyToolReader.MoreThanOneClassInFileException">Thrown when there is an error in the Xml file.  Can be from when there is more than one class node found.</exception>
+        </member>
+        <member name="M:StudyToolReader.Class.LoadFromNode(System.Xml.XmlNode)">
+            <summary>
+            Loads the data from the given XmlNode
+            </summary>
+            <param name="node">XmlNode to get the data from.</param>
+        </member>
+        <member name="M:StudyToolReader.Class.ToXmlNode(System.Xml.XmlDocument)">
+            <summary>
+            Creates an System.Xml.XmlNode from the Class
+            </summary>
+            <param name="xdoc">XmlDocument needed to create the node for.</param>
+            <returns>Returns the created node.</returns>
+        </member>
+        <member name="M:StudyToolReader.Class.ToXmlDocument">
+            <summary>
+            Creates a System.Xml.XmlDocument from the Class.  Does NOT save it to disk.
+            </summary>
+            <returns>Returns the created XmlDocument.</returns>
+        </member>
+        <member name="M:StudyToolReader.Class.CreateXmlDocument(System.String)">
+            <summary>
+            Careates and saves a XmlDocument from the Class.
+            </summary>
+            <param name="filePath">File path where you want to save the file.</param>
+            <returns>Returns the created XmlDocument.</returns>
+            <exception cref="T:StudyToolReader.FailToSaveClassException">Thrown when there is an error saving the class to the file.</exception>
+        </member>
+        <member name="M:StudyToolReader.Class.GetFirstXmlElement(System.Xml.XmlDocument)">
+            <summary>
+            Gets the first XmlElement from the document.
+            </summary>
+            <param name="xdoc">The xml document you want to use.</param>
+            <returns>Returns the first found xml element from the document.</returns>
+        </member>
+        <member name="M:StudyToolReader.Class.Save">
+            <summary>
+            Saves the Class to the file specified from the filePath field.
+            </summary>
+        </member>
+        <member name="M:StudyToolReader.Class.Save(System.String)">
+            <summary>
+            Saves the Class to the inputed file.
+            </summary>
+            <param name="filePath">Filepath where to save the file.</param>
+        </member>
+        <member name="T:StudyToolReader.FailToSaveClassException">
+            <summary>
+            Class defining an exception that occurs while trying to save a class and it fails.
+            </summary>
+        </member>
+        <member name="T:StudyToolReader.MoreThanOneClassInFileException">
+            <summary>
+            Class defining an exception that occurs while trying to load a class with more than one class node.
+            </summary>
+        </member>
+        <member name="T:StudyToolReader.Question">
+            <summary>
+            Represents a question and answer.
+            </summary>
+        </member>
+        <member name="P:StudyToolReader.Question.q">
+            <summary>
+            Gets/Sets the question this StudyToolReader.Question holds.  Default is empty.
+            </summary>
+        </member>
+        <member name="P:StudyToolReader.Question.a">
+            <summary>
+            Gets/Sets the answer to the question this StudyToolReader.Question holds. Default is empty.
+            </summary>
+        </member>
+        <member name="P:StudyToolReader.Question.Id">
+            <summary>
+            Uniqueidentifier of the Question.
+            </summary>
+        </member>
+        <member name="P:StudyToolReader.Question.QuestionsId">
+            <summary>
+            Uniqueidentifier of the set of Questions this Question belongs to.
+            </summary>
+        </member>
+        <member name="P:StudyToolReader.Question.ClassId">
+            <summary>
+            Uniqueidentifier of the Class this Question belongs to.
+            </summary>
+        </member>
+        <member name="M:StudyToolReader.Question.#ctor">
+            <summary>
+            Initializes to the default question and answer(emtpy string).
+            </summary>
+        </member>
+        <member name="M:StudyToolReader.Question.#ctor(System.String,System.String)">
+            <summary>
+            Initializes the StudyToolReader.Question with the given question and answer.
+            </summary>
+            <param name="q">The question.</param>
+            <param name="a">The answer.</param>
+        </member>
+        <member name="M:StudyToolReader.Question.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Initializes the StudyToolReader.Question with the given System.Xml.XmlNode.
+            </summary>
+            <param name="node">System.Xml.XmlNode containing the data to initialize the StudyToolReader.Question with.</param>
+        </member>
+        <member name="M:StudyToolReader.Question.ToXmlNode(System.Xml.XmlDocument)">
+            <summary>
+            Creates an System.Xml.XmlNode fromt the Question.
+            </summary>
+            <param name="xdoc">XmlDocument needed to create the node for.</param>
+            <returns>Returns the created node.</returns>
+        </member>
+        <member name="T:StudyToolReader.Questions">
+            <summary>
+            Represents a set of questions and answers
+            </summary>
+        </member>
+        <member name="P:StudyToolReader.Questions.section">
+            <summary>
+            Gets/Sets the name of the section.  Used for organizing sets of StudyToolReader.Questions.
+            </summary>
+        </member>
+        <member name="P:StudyToolReader.Questions.questions">
+            <summary>
+            Gets/Sets the list of questions.
+            </summary>
+        </member>
+        <member name="P:StudyToolReader.Questions.Id">
+            <summary>
+            Uniqueidentifier of the set of Questions.
+            </summary>
+        </member>
+        <member name="P:StudyToolReader.Questions.ClassId">
+            <summary>
+            Uniqueidentifier of the Class this set of Questions belongs to.
+            </summary>
+        </member>
+        <member name="M:StudyToolReader.Questions.#ctor">
+            <summary>
+            Initializes the set of questions to their default values.
+            </summary>
+        </member>
+        <member name="M:StudyToolReader.Questions.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Initializes the set of questions with the data from the System.Xml.XmlNode.
+            </summary>
+            <param name="node">XmlNode Containing the data.</param>
+        </member>
+        <member name="M:StudyToolReader.Questions.#ctor(System.Collections.Generic.List{StudyToolReader.Question},System.String)">
+            <summary>
+            Initializes the set of questions with the given set of questions and section.
+            </summary>
+            <param name="questions">List of questions.</param>
+            <param name="section">Name of the section.</param>
+        </member>
+        <member name="M:StudyToolReader.Questions.ToXmlNode(System.Xml.XmlDocument)">
+            <summary>
+            Creates an System.Xml.XmlNode from the Questions
+            </summary>
+            <param name="xdoc">XmlDocument needed to create the node for.</param>
+            <returns>Returns the created node.</returns>
+        </member>
+        <member name="T:StudyToolReader.StudyToolSql">
+            <summary>
+            Querys the database for Class, Questions, and Question objects.
+            Uses connection string found in the App.config connectionstring with the name 'StudyToolDB'.
+            </summary>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.GetClasses(System.Boolean,System.Boolean)">
+            <summary>
+            Gets all of the Class objects from the database.
+            </summary>
+            <param name="omitQuestionSets">Wether you want to get the Questions object sets or not.</param>
+            <param name="omitQuestions">Wether you want to get the Question objects or not.</param>
+            <returns>List of Class objects found in the database.</returns>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.GetClass(System.Guid,System.Boolean,System.Boolean)">
+            <summary>
+            Gets the Class object from the database matching the given id.
+            </summary>
+            <param name="id">Id of the Class you want to find.</param>
+            <param name="omitQuestionSets">Wether you want to get the Questions object sets or not.</param>
+            <param name="omitQuestions">Wether you want to get the Question objects or not.</param>
+            <returns>Class object found in the database.</returns>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.GetQuestionSets(System.Guid,System.Boolean)">
+            <summary>
+            Gets the set of Question from the given Class objects Id.
+            </summary>
+            <param name="classId">Id of the Class you wans to get the Questions for.</param>
+            <param name="omitQuestions">Wether you want to get the Question objects or not.</param>
+            <returns>List of Questions found in the database.</returns>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.GetQuestionSet(System.Guid,System.Guid,System.Boolean)">
+            <summary>
+            Gets the Questions set from the given Ids.
+            </summary>
+            <param name="id">Id of the Questions set to find.</param>
+            <param name="classId">Id of the parent Class.</param>
+            <param name="omitQuestions">Whether you want to get the Question objects or not.</param>
+            <returns>The Questions set from the database.</returns>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.GetQuestions(System.Guid,System.Guid)">
+            <summary>
+            Gets all the Question objects from the database from given parent Questions id and Class id.
+            </summary>
+            <param name="setId">Id of the parent Questions set.</param>
+            <param name="classId">Id of the parent Class.</param>
+            <returns>List of Question objects from the database.</returns>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.GetQuestion(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            Gets Question objects from the database from given ids.
+            </summary>
+            <param name="id">Id of the Question.</param>
+            <param name="setId">Id of the parent Questions set.</param>
+            <param name="classId">Id of the parent Class.</param>
+            <returns>Question object from the database.</returns>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.AddClass(StudyToolReader.Class,System.Boolean,System.Boolean)">
+            <summary>
+            Adds the Class to the database.
+            </summary>
+            <param name="c">The Class you want to add.</param>
+            <param name="omitQuestionSets">Whether you want to add the Questions sets too.</param>
+            <param name="omitQuestions">Whether you want to add the Question objects too.</param>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.AddQuestionSet(StudyToolReader.Questions,System.Guid,System.Boolean)">
+            <summary>
+            Adds the Questions set to the database.
+            </summary>
+            <param name="questions">The Questions set you want to add.</param>
+            <param name="classId">The id of the parent Class.</param>
+            <param name="omitQuestions">Whether you want to add Question objects too.</param>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.AddQuestion(StudyToolReader.Question,System.Guid,System.Guid)">
+            <summary>
+            Adds the Question to the database.
+            </summary>
+            <param name="question">The Question you want to add.</param>
+            <param name="setId">The id of the parent Questions set.</param>
+            <param name="classId">The id of the parent Class.</param>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.UpdateClass(StudyToolReader.Class,System.Boolean,System.Boolean)">
+            <summary>
+            Updates the Class in the database.
+            </summary>
+            <param name="c">The Class you want to update.</param>
+            <param name="omitQuestionSets">Whether you want to update the Questions sets too.</param>
+            <param name="omitQuestions">Whether you want to update the Question objects too.</param>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.UpdateQuestionSet(StudyToolReader.Questions,System.Guid,System.Boolean)">
+            <summary>
+            Updates the Questions set in the database.
+            </summary>
+            <param name="questions">The Questions set you want to update.</param>
+            <param name="classId">The id of the parent Class.</param>
+            <param name="omitQuestions">Whether you want to update Question objects too.</param>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.UpdateQuestion(StudyToolReader.Question,System.Guid,System.Guid)">
+            <summary>
+            Updates the Question in the database.
+            </summary>
+            <param name="question">The Question you want to update.</param>
+            <param name="setId">The id of the parent Questions set.</param>
+            <param name="classId">The id of the parent Class.</param>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.Nuke">
+            <summary>
+            Nukes the database. :(
+            </summary>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.DeleteClass(System.Guid,System.Boolean,System.Boolean)">
+            <summary>
+            Deletes the Class from the database.
+            </summary>
+            <param name="id">Id of the class you want to delete.</param>
+            <param name="omitQuestionSets">Whether you want to keep the Questions sets or not.</param>
+            <param name="omitQuestions">Wether you want to keep the Question objects or not.</param>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.DeleteQuestionSets(System.Guid,System.Boolean)">
+            <summary>
+            Deletes the Questions sets from the database of the given Class.
+            </summary>
+            <param name="classId">Id of the parent Class.</param>
+            <param name="omitQuestions">Wether you want to keep the Question objects or not.</param>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.DeleteQuestionSet(System.Guid,System.Guid,System.Boolean)">
+            <summary>
+            Deletes the Questions set from the database.
+            </summary>
+            <param name="id">Id of the Questions set you want to delete.</param>
+            <param name="classId">Id of the parent Class.</param>
+            <param name="omitQuestions">Wether you want to keep the Question objects or not.</param>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.DeleteQuestions(System.Guid)">
+            <summary>
+            Deletes the Question objects from the database of the given Class.
+            </summary>
+            <param name="classId">Id of the Class.</param>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.DeleteQuestions(System.Guid,System.Guid)">
+            <summary>
+            Deletes the Question objects from the database of the given Questions set.
+            </summary>
+            <param name="setId">Id of the Questions set.</param>
+            <param name="classId">Id of the parent Class.</param>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.DeleteQuestion(System.Guid,System.Guid,System.Guid)">
+            <summary>
+            Deletes the Question object from the database.
+            </summary>
+            <param name="id">Id of the Question object.</param>
+            <param name="setId">Id of the Questions set it's in.</param>
+            <param name="classId">Id of the parent Class.</param>
+        </member>
+        <member name="M:StudyToolReader.StudyToolSql.RunSql(System.String)">
+            <summary>
+            Performs an ExecuteNonQuery() on the given Sql code.
+            </summary>
+            <param name="statement">Sql code to run.</param>
+        </member>
+    </members>
+</doc>

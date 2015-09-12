@@ -1,0 +1,187 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>StudyToolReader</name>
+    </assembly>
+    <members>
+        <member name="T:StudyToolReader.Class">
+            <summary>
+            Organizes and represents StudyToolReader.Questions
+            </summary>
+        </member>
+        <member name="M:StudyToolReader.Class.#ctor">
+            <summary>
+            Initializes the Class to the default values.
+            </summary>
+        </member>
+        <member name="M:StudyToolReader.Class.#ctor(System.Xml.XmlDocument)">
+            <summary>
+            Initializes the Class with the data from the class node in the XmlDocument.
+            </summary>
+            <param name="xdoc">XmlDocument data to be used.</param>
+        </member>
+        <member name="M:StudyToolReader.Class.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Initializes the data with the data from the XmlNode.
+            </summary>
+            <param name="node">XmlNode to get data from.</param>
+        </member>
+        <member name="M:StudyToolReader.Class.#ctor(System.String)">
+            <summary>
+            Initializes data from the class node from the given document.
+            </summary>
+            <param name="filePath">Path to the file where the XmlDocument that has the data is located.</param>
+            <exception cref="T:StudyToolReader.MoreThanOneClassInFileException">Thrown when there is an error in the Xml file.  Can be from when there is more than one class node found.</exception>
+        </member>
+        <member name="M:StudyToolReader.Class.LoadFromNode(System.Xml.XmlNode)">
+            <summary>
+            Loads the data from the given XmlNode
+            </summary>
+            <param name="node">XmlNode to get the data from.</param>
+        </member>
+        <member name="M:StudyToolReader.Class.ToXmlNode(System.Xml.XmlDocument)">
+            <summary>
+            Creates an System.Xml.XmlNode from the Class
+            </summary>
+            <param name="xdoc">XmlDocument needed to create the node for.</param>
+            <returns>Returns the created node.</returns>
+        </member>
+        <member name="M:StudyToolReader.Class.ToXmlDocument">
+            <summary>
+            Creates a System.Xml.XmlDocument from the Class.  Does NOT save it to disk.
+            </summary>
+            <returns>Returns the created XmlDocument.</returns>
+        </member>
+        <member name="M:StudyToolReader.Class.CreateXmlDocument(System.String)">
+            <summary>
+            Careates and saves a XmlDocument from the Class.
+            </summary>
+            <param name="filePath">File path where you want to save the file.</param>
+            <returns>Returns the created XmlDocument.</returns>
+            <exception cref="T:StudyToolReader.FailToSaveClassException">Thrown when there is an error saving the class to the file.</exception>
+        </member>
+        <member name="M:StudyToolReader.Class.GetFirstXmlElement(System.Xml.XmlDocument)">
+            <summary>
+            Gets the first XmlElement from the document.
+            </summary>
+            <param name="xdoc">The xml document you want to use.</param>
+            <returns>Returns the first found xml element from the document.</returns>
+        </member>
+        <member name="M:StudyToolReader.Class.Save">
+            <summary>
+            Saves the Class to the file specified from the filePath field.
+            </summary>
+        </member>
+        <member name="M:StudyToolReader.Class.Save(System.String)">
+            <summary>
+            Saves the Class to the inputed file.
+            </summary>
+            <param name="filePath">Filepath where to save the file.</param>
+        </member>
+        <member name="P:StudyToolReader.Class.name">
+            <summary>
+            Gets/Sets the name of the class.
+            </summary>
+        </member>
+        <member name="P:StudyToolReader.Class.questions">
+            <summary>
+            Gets/Sets the set of questions this class has.
+            </summary>
+        </member>
+        <member name="P:StudyToolReader.Class.filePath">
+            <summary>
+            Where to find the file.
+            </summary>
+        </member>
+        <member name="T:StudyToolReader.FailToSaveClassException">
+            <summary>
+            Class defining an exception that occurs while trying to save a class and it fails.
+            </summary>
+        </member>
+        <member name="T:StudyToolReader.MoreThanOneClassInFileException">
+            <summary>
+            Class defining an exception that occurs while trying to load a class with more than one class node.
+            </summary>
+        </member>
+        <member name="T:StudyToolReader.Question">
+            <summary>
+            Represents a question and answer.
+            </summary>
+        </member>
+        <member name="M:StudyToolReader.Question.#ctor">
+            <summary>
+            Initializes to the default question and answer(emtpy string).
+            </summary>
+        </member>
+        <member name="M:StudyToolReader.Question.#ctor(System.String,System.String)">
+            <summary>
+            Initializes the StudyToolReader.Question with the given question and answer.
+            </summary>
+            <param name="q">The question.</param>
+            <param name="a">The answer.</param>
+        </member>
+        <member name="M:StudyToolReader.Question.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Initializes the StudyToolReader.Question with the given System.Xml.XmlNode.
+            </summary>
+            <param name="node">System.Xml.XmlNode containing the data to initialize the StudyToolReader.Question with.</param>
+        </member>
+        <member name="M:StudyToolReader.Question.ToXmlNode(System.Xml.XmlDocument)">
+            <summary>
+            Creates an System.Xml.XmlNode fromt the Question.
+            </summary>
+            <param name="xdoc">XmlDocument needed to create the node for.</param>
+            <returns>Returns the created node.</returns>
+        </member>
+        <member name="P:StudyToolReader.Question.q">
+            <summary>
+            Gets/Sets the question this StudyToolReader.Question holds.  Default is empty.
+            </summary>
+        </member>
+        <member name="P:StudyToolReader.Question.a">
+            <summary>
+            Gets/Sets the answer to the question this StudyToolReader.Question holds. Default is empty.
+            </summary>
+        </member>
+        <member name="T:StudyToolReader.Questions">
+            <summary>
+            Represents a set of questions and answers
+            </summary>
+        </member>
+        <member name="M:StudyToolReader.Questions.#ctor">
+            <summary>
+            Initializes the set of questions to their default values.
+            </summary>
+        </member>
+        <member name="M:StudyToolReader.Questions.#ctor(System.Xml.XmlNode)">
+            <summary>
+            Initializes the set of questions with the data from the System.Xml.XmlNode.
+            </summary>
+            <param name="node">XmlNode Containing the data.</param>
+        </member>
+        <member name="M:StudyToolReader.Questions.#ctor(System.Collections.Generic.List{StudyToolReader.Question},System.String)">
+            <summary>
+            Initializes the set of questions with the given set of questions and section.
+            </summary>
+            <param name="questions">List of questions.</param>
+            <param name="section">Name of the section.</param>
+        </member>
+        <member name="M:StudyToolReader.Questions.ToXmlNode(System.Xml.XmlDocument)">
+            <summary>
+            Creates an System.Xml.XmlNode from the Questions
+            </summary>
+            <param name="xdoc">XmlDocument needed to create the node for.</param>
+            <returns>Returns the created node.</returns>
+        </member>
+        <member name="P:StudyToolReader.Questions.section">
+            <summary>
+            Gets/Sets the name of the section.  Used for organizing sets of StudyToolReader.Questions.
+            </summary>
+        </member>
+        <member name="P:StudyToolReader.Questions.questions">
+            <summary>
+            Gets/Sets the list of questions.
+            </summary>
+        </member>
+    </members>
+</doc>
