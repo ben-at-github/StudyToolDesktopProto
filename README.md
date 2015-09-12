@@ -1,2 +1,2 @@
 # StudyToolDesktopProto
-Study Tool is an alternative to flash cards.  Like flash cards it offers a quick lookup for questions and answers.
+Study Tool is an alternative to flash cards.  Study Tools offers a gui for creating and viewing questions for any class.
